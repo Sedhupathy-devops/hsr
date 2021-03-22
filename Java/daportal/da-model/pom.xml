@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>portal</artifactId>
+    <groupId>com.emids.da</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>da-model</artifactId>
+
+  <name>da-model</name>
+  <url>http://portal.emids.com</url>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.emids.da</groupId>
+      <artifactId>da-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <!-- Jackson Dependencies -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+    </dependency>
+
+    <!-- QueryDSL dependencies -->
+    <dependency>
+      <groupId>com.querydsl</groupId>
+      <artifactId>querydsl-apt</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.querydsl</groupId>
+      <artifactId>querydsl-core</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.querydsl</groupId>
+      <artifactId>querydsl-jpa</artifactId>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
+    <dependency>
+      <groupId>javax.annotation</groupId>
+      <artifactId>javax.annotation-api</artifactId>
+    </dependency>
+  </dependencies>
+
+</project>

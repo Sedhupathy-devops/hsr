@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body {
+    background: #f2f5f7 !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px !important;
+    color: #646B7A !important;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    color: #646B7A;
+    color: rgb(100, 107, 122);
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: #646B7A;
+    color: rgb(100, 107, 122);
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #646B7A;
+    color: rgb(100, 107, 122);
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #646B7A;
+    color: rgb(100, 107, 122);
+}
+
+h5 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #646B7A;
+    color: rgb(100, 107, 122);
+}
+
+h6 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #646B7A;
+    color: rgb(100, 107, 122);
+}
+
+table {
+    color: #646B7A !important;
+}
+
+table i {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+table td,
+th {
+    line-height: 30px;
+    padding-left: 15px !important;
+}
+
+.emidsBrandpri {
+    color: #f57f29;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.emidsBrandsec {
+    color: #004f6e;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.emBg {
+    background: #015a82;
+    padding: 0;
+}
+
+.footer {
+    background: #fff;
+    bottom: 0;
+    width: 100%;
+}
+
+#sideNav a {
+    color: #fff !important;
+}
+
+#sideNav .nav-item {
+    line-height: 40px;
+    margin: 0px;
+    border-bottom: solid 1px rgba(0, 113, 188, 0.4);
+}
+
+#sideNav .nav-item .active {
+    background: #0071bc;
+}
+
+#sideNav .nav-item:hover {
+    background: #0071bc;
+}
+
+#sideNav i {
+    font-size: 23px !important;
+    margin-right: 5px;
+}
+
+
+/* box Layout */
+
+.boxTitles {
+    font-family: Roboto;
+    font-size: 22px;
+    color: #646B7A;
+    color: rgb(100, 107, 122);
+}
+
+.box {
+    position: relative;
+    border-radius: 0px;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.box-header.with-border {
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.box-header {
+    color: #444;
+    display: block;
+    padding: 10px;
+    position: relative;
+}
+
+.box-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding: 10px;
+}
+
+.box-footer {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top: 1px solid #f4f4f4;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.box.box-primary {
+    border-top-color: #3c8dbc;
+}
+
+.noborder {
+    border: none !important;
+}
+
+
+/*App status */
+
+.cancelled {
+    color: #ed1c24 !important;
+}
+
+.completed {
+    color: #27b373
+}
+
+.inProgress {
+    color: #f57f29;
+}
+
+.restart {
+    color: #004f6e;
+}
+
+
+/*dashboard style */
+
+.highlightNumber {
+    font-family: "Roboto";
+    font-size: 35px;
+}
+
+.smallNo {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 25px
+}
+
+.smallbtn {
+    font-size: 12px;
+    background: #f57f29;
+    color: #fff;
+}
+
+.smallbtn:hover {
+    font-size: 12px;
+    background: #bb5913;
+    color: #fff;
+}
+
+.smallFont {
+    font-family: 'Roboto';
+    font-size: 13px;
+    color: #828A9F;
+    color: rgb(130, 138, 159);
+}
+
+.imarginTop {
+    margin-bottom: -20px;
+    margin-top: 10px;
+}
+
+.imarginBottom {
+    margin-bottom: -5px;
+    margin-top: 10px;
+}
+
+.ifont {
+    font-size: 30px !important;
+}
+
+.thheader {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, .03);
+    line-height: 40px;
+}
+
+.pull-right {
+    float: right;
+    text-align: right;
+}
+
+.table-responsive {
+    padding: 10px;
+}
+
+.mt-3,
+.my-3 {
+    margin-top: 1.5rem !important;
+}
+
+.userimg {
+    border-radius: 50%;
+    width: 40px;
+}
+
+.c2 {
+    flex: 0 0 19%;
+    max-width: 19%;
+    margin-left: 13px;
+}
+
+.c2Box {
+    min-height: 130px;
+}
+
+.input-group-text {
+    border-radius: 0px;
+}
+
+.pullright {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 20px;
+}
+
+.pullleft {
+    display: flex;
+    padding-right: 20px;
+}
+
+
+/* button styles */
+
+.emidsPribtn {
+    background: #f57f29;
+    color: #fff;
+    border-radius: 25px;
+    min-width: 150px;
+}
+
+.emidsPribtn:hover {
+    background: #bb5913;
+    color: #fff;
+}

@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICS.WebAPI", "ICS.WebAPI\ICS.WebAPI.csproj", "{BD465F08-05B9-4E1C-B87B-7CF74759E46D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICS.Services", "ICS.Services\ICS.Services.csproj", "{F1207E7C-F10D-4954-A233-0173E0E68838}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICS.DAL", "ICS.DAL\ICS.DAL.csproj", "{19398572-88B8-4ECA-A3E4-0A95F6D11644}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD465F08-05B9-4E1C-B87B-7CF74759E46D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD465F08-05B9-4E1C-B87B-7CF74759E46D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD465F08-05B9-4E1C-B87B-7CF74759E46D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD465F08-05B9-4E1C-B87B-7CF74759E46D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1207E7C-F10D-4954-A233-0173E0E68838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1207E7C-F10D-4954-A233-0173E0E68838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1207E7C-F10D-4954-A233-0173E0E68838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1207E7C-F10D-4954-A233-0173E0E68838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19398572-88B8-4ECA-A3E4-0A95F6D11644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19398572-88B8-4ECA-A3E4-0A95F6D11644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19398572-88B8-4ECA-A3E4-0A95F6D11644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19398572-88B8-4ECA-A3E4-0A95F6D11644}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2531F29B-F96A-42D7-B3B6-55939B65E2F6}
+	EndGlobalSection
+EndGlobal

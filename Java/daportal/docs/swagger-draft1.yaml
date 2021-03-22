@@ -1,0 +1,453 @@
+swagger: "2.0"
+info:
+  description: "API end points and its definitions for the DAPortal"
+  version: "1.0.0"
+  title: "DAPortal"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "Lokanadham.Nalla@emids.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost:8080"
+basePath: "/daportal"
+schemes:
+- "http"
+paths:
+  /login:
+    post:
+      tags:
+      - "auth"
+      summary: "Login to DA Portal"
+      description: ""
+      operationId: "login"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "body"
+        in: "body"
+        description: "Login with user credentials"
+        required: true
+        schema:
+          $ref: "#/definitions/Login"
+      responses:
+        "200":
+          description: "successful login (User)"
+          schema:
+            type: "object"
+            properties:
+              user:
+                $ref: "#/definitions/User"
+        "405":
+          description: "Invalid input"
+  /logout:
+    post:
+      tags:
+      - "auth"
+      summary: "Logout from DA Portal"
+      description: ""
+      operationId: "logout"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "body"
+        in: "body"
+        description: "email id"
+        required: true
+        schema:
+          type: "string"
+          format: "string"
+      responses:
+        "405":
+          description: "Invalid input"
+  /dasupport/{email}:
+    get:
+      tags:
+      - "dasupport"
+      summary: "Display Dashboard"
+      description: ""
+      operationId: "displayDashboard"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "email"
+        in: "path"
+        description: "email id of the user"
+        required: true
+        type: "string"
+        format: "string"
+      responses:
+        "200":
+          description: "Dashboard with List of Reviews"
+          schema:
+            type: "object"
+            properties:
+              dashboard:
+                "$ref": "#/definitions/Dashboard"
+        "405":
+          description: "Invalid input"        
+  /dasupport/schedule:
+    post:
+      tags:
+      - "dasupport"
+      summary: "Schedule a Review"
+      description: ""
+      operationId: "ScheduleByDASupport"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "body"
+        in: "body"
+        description: "email id of the user"
+        required: true
+        schema:
+          $ref: "#/definitions/Review"
+      responses:
+        "200":
+          description: "success"
+          schema:
+            type: "boolean"
+        "405":
+          description: "Invalid input"
+  /dasupport/reschedule:
+    post:
+      tags:
+      - "dasupport"
+      summary: "Reschedule a Review"
+      description: ""
+      operationId: "RescheduleByDaSupport"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "body"
+        in: "body"
+        description: "email id of the user"
+        required: true
+        schema:
+          $ref: "#/definitions/Review"
+      responses:
+        "200":
+          description: "success"
+          schema:
+            type: "boolean"
+        "405":
+          description: "Invalid input"        
+  /dasupport:
+    put:
+      tags:
+      - "dasupport"
+      summary: "Edit an existing Review"
+      description: ""
+      operationId: "EditByDASupport"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "body"
+        in: "body"
+        description: "email id of the user"
+        required: true
+        schema:
+          $ref: "#/definitions/Review"
+      responses:
+        "200":
+          description: "success"
+          schema:
+            type: "boolean"
+        "405":
+          description: "Invalid input"  
+  /dasupport/cancel:
+    post:
+      tags:
+      - "dasupport"
+      summary: "Cancel a Review"
+      description: ""
+      operationId: "CancelByDASupport"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "body"
+        in: "body"
+        description: "email id of the user"
+        required: true
+        schema:
+          $ref: "#/definitions/CancelReview"
+      responses:
+        "200":
+          description: "success"
+          schema:
+            type: "boolean"
+        "405":
+          description: "Invalid input"
+  /dasupport/projects:
+    get:
+      tags:
+      - "dasupport"
+      summary: "List of Projects"
+      description: ""
+      operationId: "ListOfProjectByDASupport"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "List of Projects"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Project"
+        "405":
+          description: "Invalid input"        
+  /reviewer/{email}:
+    get:
+      tags:
+      - "reviewer"
+      summary: "Display Reviewer Information"
+      description: ""
+      operationId: "displayReviewer"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "email"
+        in: "path"
+        description: "email id of the user"
+        required: true
+        type: "string"
+        format: "string"
+      responses:
+        "200":
+          description: "List of Reviews"
+          schema:
+            type: "array"
+            items: 
+              $ref: "#/definitions/Review"
+        "405":
+          description: "Invalid input"
+  /reviewer/reschedule:
+    post:
+      tags:
+      - "reviewer"
+      summary: "Reschedule a Review"
+      description: ""
+      operationId: "RescheduleReviewer"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "body"
+        in: "body"
+        description: "email id of the user"
+        required: true
+        schema:
+          $ref: "#/definitions/Review"
+      responses:
+        "200":
+          description: "success"
+          schema:
+            type: "boolean"
+        "405":
+          description: "Invalid input"
+  /reviewer/cancel:
+    post:
+      tags:
+      - "reviewer"
+      summary: "Cancel a Review "
+      description: ""
+      operationId: "cancelRevieweByReviewer"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "email"
+        in: "body"
+        description: "email id of the user"
+        required: true
+        schema:
+          $ref: "#/definitions/CancelReview"
+      responses:
+        "200":
+          description: "success"
+          schema:
+            type: "boolean"
+        "405":
+          description: "Invalid input"
+  /reviewee/{email}:
+    get:
+      tags:
+      - "reviewee"
+      summary: "Display Reviewee Information"
+      description: ""
+      operationId: "displayReviewee"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "email"
+        in: "path"
+        description: "email id of the user"
+        required: true
+        type: "string"
+        format: "string"
+      responses:
+        "200":
+          description: "List of Reviews"
+          schema:
+            type: "array"
+            items: 
+              $ref: "#/definitions/Review"
+        "405":
+          description: "Invalid input"
+  /reviewee/reschedule:
+    post:
+      tags:
+      - "reviewee"
+      summary: "Reschedule a Review"
+      description: ""
+      operationId: "RescheduleReviewee"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "body"
+        in: "body"
+        description: "email id of the user"
+        required: true
+        schema:
+          $ref: "#/definitions/Review"
+      responses:
+        "200":
+          description: "success"
+          schema:
+            type: "boolean"
+        "405":
+          description: "Invalid input"
+definitions:
+  Login:
+    type: "object"
+    properties:
+      email: 
+        type: "string"
+      password: 
+        type: "string"
+        format: "password"
+  User:
+    type: "object"
+    properties:
+      firstname: 
+        type: "string"
+      lastname: 
+        type: "string"
+      email: 
+        type: "string"
+      role:
+        type: "string"
+  Review:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      email:
+        type: "string"
+      project_id:
+        type: "string"
+      reviewer_email:
+        type: "string"
+      reviewee_email:
+        type: "string"
+      start_datetime:
+        type: "string"
+        format: "date-time"
+      end_datetime:
+        type: "string"
+        format: "date-time"
+    xml:
+      name: "Review"
+  Dashboard:
+    type: "object"
+    properties:
+      reviews_pending:
+        type: "integer"
+        format: "int64"
+      reviews_completed:
+        type: "integer"
+        format: "int64"
+      reviews_cancelled:
+        type: "integer"
+        format: "int64"
+      reviews_rescheduled:
+        type: "integer"
+        format: "int64"
+      reviews_inprogress:
+        type: "integer"
+        format: "int64"
+      all_reviews:
+        type: "array"
+        items:
+          $ref: "#/definitions/Review"
+    xml:
+      name: "Dashboard"     
+  CancelReview:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      email:
+        type: "string"
+    xml:
+      name: "Reschedule" 
+  Project:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      name:
+        type: "string"
+    xml:
+      name: "Project"    
+  ProjectDetails:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      name:
+        type: "string"
+      project_manager:
+        type: "string"
+      project_start_date:
+        type: "string"
+        format: "date-time"
+      project_end_date:
+        type: "string"
+        format: "date-time" 
+      account:
+        type: "string"
+    xml:
+      name: "ProjectDetails"  
+      
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"

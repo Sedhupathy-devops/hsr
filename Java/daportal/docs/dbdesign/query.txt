@@ -1,0 +1,79 @@
+SELECT year,
+       month,
+       account_name,
+       project_name,
+       em_score,
+       qa_score,
+       tq_score,
+       ba_score,
+       bi_score,
+       internal_rating,
+       dm_rating,
+       am_rating,
+       hr_rating,
+       csat_rating
+FROM review_baseline rb
+WHERE (em_score < 60 AND em_score > 0)
+   OR (qa_score < 60 AND qa_score > 0)
+   OR (tq_score < 60 AND tq_score > 0)
+   OR (ba_score < 60 AND ba_score > 0)
+   OR (bi_score < 60 AND bi_score > 0)
+   AND (internal_rating = 'GREEN' AND internal_rating = '')
+   AND month in ('Oct', 'Nov', 'Dec') AND year in (2019, 2020)
+ORDER BY account_name, project_name;
+
+
+SELECT year,
+       month,
+       account_name,
+       project_name,
+       em_score,
+       qa_score,
+       tq_score,
+       ba_score,
+       bi_score,
+       da_score,
+       quality_rating,
+       internal_rating,
+       dm_rating,
+       am_rating,
+       hr_rating,
+       csat_rating
+FROM review_baseline rb
+WHERE (em_score < 60 AND em_score > 0)
+   OR (qa_score < 60 AND qa_score > 0)
+   OR (tq_score < 60 AND tq_score > 0)
+   OR (ba_score < 60 AND ba_score > 0)
+   OR (bi_score < 60 AND bi_score > 0)
+    AND (internal_rating = 'GREEN' or internal_rating = '')
+ORDER BY account_name, project_name;
+
+describe review_baseline;
+
+select * from review_baseline where internal_rating <> 'GREEN' group by project_name;
+
+
+SELECT project_name,
+       avg(nullif(qa_score, -1)) AS qa_score,
+       avg(nullif(em_score, -1)) AS em_score,
+       avg(nullif(tq_score, -1)) AS tq_score,
+       avg(nullif(ba_score, -1)) AS ba_score,
+       avg(nullif(bi_score, -1)) AS bi_score
+FROM review_baseline
+WHERE (internal_rating = 'GREEN' OR internal_rating = '')
+  AND month IN ('Oct', 'Nov', 'Dec')
+  AND year IN (2019, 2020)
+GROUP BY project_name
+HAVING avg(nullif(qa_score, -1)) < 60 AND avg(nullif(qa_score, -1)) > 0
+    OR avg(nullif(em_score, -1)) < 60 AND avg(nullif(em_score, -1)) > 0
+    OR avg(nullif(tq_score, -1)) < 60 AND avg(nullif(tq_score, -1)) > 0
+    OR avg(nullif(ba_score, -1)) < 60 AND avg(nullif(ba_score, -1)) > 0;
+
+SELECT account_name, project_name, internal_rating, qa_score, em_score, tq_score, ba_score, bi_score
+FROM review_baseline rb
+WHERE (internal_rating <> 'GREEN')
+  AND month IN ('Oct', 'Nov', 'Dec')
+  AND year IN (2019, 2020)
+GROUP BY account_name, project_name
+ORDER BY account_name;
+

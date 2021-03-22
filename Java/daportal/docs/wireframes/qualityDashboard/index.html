@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>QA Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+    <!-- CSS Library 
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">  
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    -->
+</head>
+
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white border-bottom shadow-sm">
+        <h5 class="my-0 mr-md-auto font-weight-normal"><span class="emidsBrandpri">Quality</span><span class="emidsBrandsec"> Dashboard</span></h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="p-2 text-dark" href="#"><span>DA Reviewer</span></a>
+            <a class="p-2 text-dark" href="#"><img src="images/proimg05.jpg" class="userimg"> </a>
+        </nav>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block emBg sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column" id="sideNav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <i class="fas fa-home"></i> Home <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="plans-reviews.html">
+                                <i class="far fa-file"></i> Plan
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-tasks"></i> Follow-up
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-calendar-alt"></i> Calendar
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-cogs"></i> Options
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>                                Review
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class="row mt-3 mb-3">
+                    <div class="col">
+                        <div class="box noborder shadow-sm c2Box">
+                            <div class="box-header">
+                                <span class="boxTitles">Scheduled</span>
+                            </div>
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <span class="highlightNumber inProgress">
+                                        128
+                                        </span>
+                                    </div>
+                                    <div class="col-md-5 smallNo">
+                                        <div class="smallFont inProgress">
+                                            <div class="imarginBottom ">256</div>
+                                            <i class="fas fa-sort-up ifont"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="box noborder shadow-sm c2Box">
+                            <div class="box-header">
+                                <span class="boxTitles">InProgress</span>
+                            </div>
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <span class="highlightNumber completed">
+                                        128
+                                        </span>
+                                    </div>
+                                    <div class="col-md-5 smallNo">
+                                        <div class="smallFont completed">
+                                            <div class="imarginBottom ">256</div>
+                                            <i class="fas fa-sort-up ifont"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="box noborder shadow-sm c2Box">
+                            <div class="box-header">
+                                <span class="boxTitles">Re-Scheduled</span>
+                            </div>
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <span class="highlightNumber completed">
+                                        128
+                                        </span>
+                                    </div>
+                                    <div class="col-md-5 smallNo">
+                                        <div class="smallFont cancelled">
+                                            <div class="imarginTop ">256</div>
+                                            <i class="fas fa-sort-down ifont"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="box noborder shadow-sm c2Box">
+                            <div class="box-header">
+                                <span class="boxTitles">Completed</span>
+                            </div>
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <span class="highlightNumber cancelled">
+                                        128
+                                        </span>
+                                    </div>
+                                    <div class="col-md-5 smallNo">
+                                        <div class="smallFont completed">
+                                            <div class="imarginBottom ">256</div>
+                                            <i class="fas fa-sort-up ifont"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="box noborder shadow-sm c2Box">
+                            <div class="box-header">
+                                <span class="boxTitles">Cancelled</span>
+                            </div>
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <span class="highlightNumber restart">
+                                        128
+                                        </span>
+                                    </div>
+                                    <div class="col-md-5 smallNo">
+                                        <div class="smallFont cancelled">
+                                            <div class="imarginTop ">256</div>
+                                            <i class="fas fa-sort-down ifont"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box noborder shadow-sm">
+                    <div class="box-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-sm">
+                                <thead>
+                                    <tr class="thheader">
+                                        <th>#</th>
+                                        <th>TEAM</th>
+                                        <th>REVIEWER</th>
+                                        <th>TIME</th>
+                                        <th>LOCATION</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>TQ</td>
+                                        <td>Aetna</td>
+                                        <td>Leperums</td>
+                                        <td>21/02/2019 - 02:30</td>
+                                        <td>CPT - 1F</td>
+                                        <td><i class="far fa-edit"></i><i class="far fa-window-close"></i><i class="fas fa-mail-bulk"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TQ</td>
+                                        <td>Aetna</td>
+                                        <td>Leperums</td>
+                                        <td>21/02/2019 - 02:30</td>
+                                        <td>CPT - 1F</td>
+                                        <td><i class="far fa-edit"></i><i class="far fa-window-close"></i><i class="fas fa-mail-bulk"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TQ</td>
+                                        <td>Aetna</td>
+                                        <td>Leperums</td>
+                                        <td>21/02/2019 - 02:30</td>
+                                        <td>CPT - 1F</td>
+                                        <td><i class="far fa-edit"></i><i class="far fa-window-close"></i><i class="fas fa-mail-bulk"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TQ</td>
+                                        <td>Aetna</td>
+                                        <td>Leperums</td>
+                                        <td>21/02/2019 - 02:30</td>
+                                        <td>CPT - 1F</td>
+                                        <td><i class="far fa-edit"></i><i class="far fa-window-close"></i><i class="fas fa-mail-bulk"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TQ</td>
+                                        <td>Aetna</td>
+                                        <td>Leperums</td>
+                                        <td>21/02/2019 - 02:30</td>
+                                        <td>CPT - 1F</td>
+                                        <td><i class="far fa-edit"></i><i class="far fa-window-close"></i><i class="fas fa-mail-bulk"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TQ</td>
+                                        <td>Aetna</td>
+                                        <td>Leperums</td>
+                                        <td>21/02/2019 - 02:30</td>
+                                        <td>CPT - 1F</td>
+                                        <td><i class="far fa-edit"></i><i class="far fa-window-close"></i><i class="fas fa-mail-bulk"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TQ</td>
+                                        <td>Aetna</td>
+                                        <td>Leperums</td>
+                                        <td>21/02/2019 - 02:30</td>
+                                        <td>CPT - 1F</td>
+                                        <td><i class="far fa-edit"></i><i class="far fa-window-close"></i><i class="fas fa-mail-bulk"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TQ</td>
+                                        <td>Aetna</td>
+                                        <td>Leperums</td>
+                                        <td>21/02/2019 - 02:30</td>
+                                        <td>CPT - 1F</td>
+                                        <td><i class="far fa-edit"></i><i class="far fa-window-close"></i><i class="fas fa-mail-bulk"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TQ</td>
+                                        <td>Aetna</td>
+                                        <td>Leperums</td>
+                                        <td>21/02/2019 - 02:30</td>
+                                        <td>CPT - 1F</td>
+                                        <td><i class="far fa-edit"></i><i class="far fa-window-close"></i><i class="fas fa-mail-bulk"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TQ</td>
+                                        <td>Aetna</td>
+                                        <td>Leperums</td>
+                                        <td>21/02/2019 - 02:30</td>
+                                        <td>CPT - 1F</td>
+                                        <td><i class="far fa-edit"></i><i class="far fa-window-close"></i><i class="fas fa-mail-bulk"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TQ</td>
+                                        <td>Aetna</td>
+                                        <td>Leperums</td>
+                                        <td>21/02/2019 - 02:30</td>
+                                        <td>CPT - 1F</td>
+                                        <td><i class="far fa-edit"></i><i class="far fa-window-close"></i><i class="fas fa-mail-bulk"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-12 pullright">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">© Emids QA Analytics .
+
+                </span>
+        </div>
+    </footer>
+</body>
+
+</html>

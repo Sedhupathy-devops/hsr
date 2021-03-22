@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+    <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+        <servlet-name>SignUp</servlet-name>
+        <servlet-class>com.emids.da.controllers.SignUpController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CalendarOperations</servlet-name>
+        <servlet-class>com.emids.da.controllers.CalendarOperationsController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AuthorizeUser</servlet-name>
+        <servlet-class>com.emids.da.controllers.AuthorizeUserController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AuthorizeOrganization</servlet-name>
+        <servlet-class>com.emids.da.controllers.AuthorizeOrganizationController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Calendars</servlet-name>
+        <servlet-class>com.emids.da.controllers.CalendarController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SignOut</servlet-name>
+        <servlet-class>com.emids.da.controllers.SignOutController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Events</servlet-name>
+        <servlet-class>com.emids.da.controllers.EventsController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignUp</servlet-name>
+        <url-pattern>/SignUp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CalendarOperations</servlet-name>
+        <url-pattern>/CalendarOperations</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AuthorizeUser</servlet-name>
+        <url-pattern>/AuthorizeUser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AuthorizeOrganization</servlet-name>
+        <url-pattern>/AuthorizeOrganization</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Calendars</servlet-name>
+        <url-pattern>/Calendars</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SignOut</servlet-name>
+        <url-pattern>/SignOut</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Events</servlet-name>
+        <url-pattern>/Events</url-pattern>
+    </servlet-mapping>
+</web-app>

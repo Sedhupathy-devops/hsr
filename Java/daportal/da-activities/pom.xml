@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <parent>
+    <artifactId>portal</artifactId>
+    <groupId>com.emids.da</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>da-activities</artifactId>
+
+  <name>da-activities</name>
+  <url>http://www.example.com</url>
+
+  <dependencies>
+    <!-- DA Portal dependecies -->
+    <dependency>
+      <groupId>com.emids.da</groupId>
+      <artifactId>da-model</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- Apache POI Dependencies -->
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml-schemas</artifactId>
+    </dependency>
+
+    <!-- monitorjbl xlsx-streamer -->
+    <dependency>
+      <groupId>com.monitorjbl</groupId>
+      <artifactId>xlsx-streamer</artifactId>
+    </dependency>
+
+    <!-- monitorjbl json-view -->
+    <dependency>
+      <groupId>com.monitorjbl</groupId>
+      <artifactId>json-view</artifactId>
+    </dependency>
+  </dependencies>
+
+</project>
