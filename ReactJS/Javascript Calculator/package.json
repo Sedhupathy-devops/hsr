@@ -1,24 +1,29 @@
 {
-  "name": "javascript-calculator",
-  "homepage": "https://afozbek.github.io/React-Calculator-Project",
+  "name": "calculator",
   "version": "0.1.0",
-  "private": true,
-  "dependencies": {
+  "license": "MIT",
+  "homepage": "http://ahfarmer.github.io/calculator",
+  "devDependencies": {
+    "chai": "^4.2.0",
     "gh-pages": "^2.0.1",
-    "mathjs": "^5.10.3",
+    "prettier": "^1.17.1",
+    "react-scripts": "^3.0.1"
+  },
+  "dependencies": {
+    "big.js": "^5.2.2",
+    "github-fork-ribbon-css": "^0.2.1",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-dom": "^16.8.6"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "prettier": {
+    "trailingComma": "all"
   },
   "browserslist": {
     "production": [
