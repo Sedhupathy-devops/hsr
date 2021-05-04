@@ -1,8 +1,8 @@
-- hosts: 13.234.112.84
+- hosts: myhost
   gather_facts: no
   tasks:
     - name: basic upload
       s3_sync:
         region: ap-northeast-1
-        bucket: devopstrainingemids
+        bucket: devopstrainingemidsjenkins
         file_root: /var/lib/jenkins/workspace/react/ReactJS/ReactJS-UnitTesting/build
