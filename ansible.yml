@@ -1,0 +1,8 @@
+- hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: basic upload
+      s3_sync:
+        region: ap-northeast-1
+        bucket: devopstrainingemids
+        file_root: /var/lib/jenkins/workspace/react/ReactJS/ReactJS-UnitTesting/build
