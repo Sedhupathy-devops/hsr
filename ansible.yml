@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: 13.234.112.84
   gather_facts: no
   tasks:
     - name: basic upload
