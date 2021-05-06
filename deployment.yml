@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mydeploy
+  labels:
+    app: reactcal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reactcal
+  template:
+    metadata:
+      labels:
+        app: reactcal
+    spec:
+      containers:
+      - name: reactcal
+        image: sedhu/reactapp:latest
+        ports:
+        - containerPort: 30010
+      restartPolicy: Always
