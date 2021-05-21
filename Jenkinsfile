@@ -3,7 +3,13 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'cd java/daportal'
+        sh 'cd Java/daportal'
+      }
+    }
+
+    stage('test') {
+      steps {
+        sh 'pwd'
       }
     }
 
